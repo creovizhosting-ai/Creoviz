@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creoviz - Creative Digital Studio</title>
+    
+    <!-- Fonts: Poppins & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+    
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            primary: '#FF513D',
+                            hover: '#8EB9FC',
+                            accent: '#E4D96F', // Softer yellow
+                        },
+                        ui: {
+                            bg: '#FFFFFF',
+                            bgSec: '#F9FAFB',
+                            textPrimary: '#2C2C2C',
+                            textSec: '#5F6368',
+                        }
+                    },
+                    fontFamily: {
+                        poppins: ['Poppins', 'sans-serif'],
+                        inter: ['Inter', 'sans-serif'],
+                    },
+                    borderRadius: {
+                        'btn': '20px',
+                        'card': '20px',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', sans-serif; font-weight: 400; line-height: 1.7; background-color: #FFFFFF; color: #2C2C2C; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Poppins', sans-serif; font-weight: 700; letter-spacing: -0.02em; }
+        .btn-text, button[type="submit"] { font-family: 'Poppins', sans-serif; font-weight: 500; }
+        nav a { font-family: 'Inter', sans-serif; font-weight: 500; }
+        .shape-blob { animation: float 6s ease-in-out infinite; }
+        @keyframes float { 0% { transform: translateY(0px); } 50% { transform: translateY(-15px); } 100% { transform: translateY(0px); } }
+    </style>
+</head>
+<body class="antialiased selection:bg-brand-primary selection:text-white overflow-x-hidden">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white/95 backdrop-blur-md z-50">
+        <div class="container mx-auto px-6 h-24 flex justify-between items-center">
+            <a href="#" class="flex items-center gap-2">
+                <img src="assets/logo.svg" alt="Creoviz Logo" class="h-12" />
+            </a>
+            
+            <div class="hidden md:flex items-center gap-8 text-ui-textSec">
+                <a href="#home" class="hover:text-brand-primary transition-colors duration-300">Home</a>
+                <a href="#services" class="hover:text-brand-primary transition-colors duration-300">Services</a>
+                <a href="#work" class="hover:text-brand-primary transition-colors duration-300">Work</a>
+                <a href="#process" class="hover:text-brand-primary transition-colors duration-300">Process</a>
+                <a href="#contact" class="hover:text-brand-primary transition-colors duration-300">Contact</a>
+            </div>
+            
+            <div class="hidden md:block">
+                <a href="#contact" class="bg-brand-accent text-ui-textPrimary px-6 py-2.5 rounded-btn btn-text hover:bg-brand-hover hover:text-white transition-colors duration-300 inline-block">
+                    Get a Quote
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-36 pb-20 lg:pt-48 lg:pb-32 bg-ui-bg relative overflow-hidden">
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="flex flex-col lg:flex-row items-center justify-between gap-16">
+                <div class="w-full lg:max-w-[650px]">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-ui-bgSec text-brand-primary font-medium text-sm mb-6">
+                        <i class="ph-fill ph-sparkle"></i> Creative Digital Studio
+                    </div>
+                    <h1 class="font-bold mb-6 text-ui-textPrimary leading-[1.1]">
+                        <span class="block text-6xl md:text-[4rem] lg:text-[4.25rem]">We Build Brands</span>
+                        <span class="block text-5xl md:text-6xl lg:text-6xl">People Remember.</span>
+                    </h1>
+                    <p class="text-lg text-ui-textSec mb-10 leading-relaxed">
+                        We create brands, websites & digital experiences that drive growth.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 mb-10">
+                        <a href="#contact" class="bg-brand-accent text-ui-textPrimary px-8 py-4 rounded-btn btn-text text-center hover:bg-brand-hover hover:text-white transition-colors duration-300">
+                            Get a Free Quote
+                        </a>
+                        <a href="#work" class="bg-ui-bgSec text-ui-textPrimary px-8 py-4 rounded-btn btn-text text-center hover:bg-brand-hover hover:text-white transition-colors duration-300">
+                            View Portfolio
+                        </a>
+                    </div>
+                    
+                    <div class="flex items-center gap-4">
+                        <div class="flex -space-x-3">
+                            <img src="assets/avatars.png" class="h-10 rounded-full bg-ui-bgSec object-cover ring-4 ring-ui-bg" alt="Clients">
+                        </div>
+                        <div class="text-sm pl-2">
+                            <div class="flex text-amber-400 text-lg">
+                                ★★★★★
+                            </div>
+                            <span class="text-ui-textSec font-medium">Trusted by 50+ businesses</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full lg:flex-1 flex justify-end relative mt-12 lg:mt-0">
+                    <img src="assets/flat_hero.png" alt="Creative Illustration" class="w-full max-w-[600px] object-contain shape-blob mix-blend-multiply">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="py-24 bg-ui-bg">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-24 max-w-2xl mx-auto">
+                <h2 class="text-4xl font-bold mb-4 text-ui-textPrimary">Our Services</h2>
+                <p class="text-lg text-ui-textSec">Clean, creative, and results-driven digital solutions.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-ui-bgSec p-10 rounded-card transition-all duration-300 hover:bg-brand-primary/5">
+                    <div class="w-14 h-14 rounded-2xl bg-white flex items-center justify-center text-brand-primary mb-6">
+                        <i class="ph ph-desktop text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-ui-textPrimary">Website Design</h3>
+                    <p class="text-ui-textSec">Modern, responsive, and high-converting websites built with purpose.</p>
+                </div>
+                <div class="bg-ui-bgSec p-10 rounded-card transition-all duration-300 hover:bg-brand-primary/5">
+                    <div class="w-14 h-14 rounded-2xl bg-white flex items-center justify-center text-brand-primary mb-6">
+                        <i class="ph ph-bezier-curve text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-ui-textPrimary">Graphic Design</h3>
+                    <p class="text-ui-textSec">Stunning visual identities, logos, and marketing materials.</p>
+                </div>
+                <div class="bg-ui-bgSec p-10 rounded-card transition-all duration-300 hover:bg-brand-primary/5">
+                    <div class="w-14 h-14 rounded-2xl bg-white flex items-center justify-center text-brand-primary mb-6">
+                        <i class="ph ph-film-strip text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-ui-textPrimary">Video Editing</h3>
+                    <p class="text-ui-textSec">Professional edits that tell your brand's unique story.</p>
+                </div>
+                <div class="bg-ui-bgSec p-10 rounded-card transition-all duration-300 hover:bg-brand-primary/5">
+                    <div class="w-14 h-14 rounded-2xl bg-white flex items-center justify-center text-brand-primary mb-6">
+                        <i class="ph ph-video-camera text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-ui-textPrimary">Motion Graphics</h3>
+                    <p class="text-ui-textSec">Engaging vector animations that simplify complex ideas.</p>
+                </div>
+                <div class="bg-ui-bgSec p-10 rounded-card transition-all duration-300 hover:bg-brand-primary/5">
+                    <div class="w-14 h-14 rounded-2xl bg-white flex items-center justify-center text-brand-primary mb-6">
+                        <i class="ph ph-megaphone text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-ui-textPrimary">Digital Marketing</h3>
+                    <p class="text-ui-textSec">Data-driven strategies to reach and engage your audience.</p>
+                </div>
+                <div class="bg-ui-bgSec p-10 rounded-card transition-all duration-300 hover:bg-brand-primary/5">
+                    <div class="w-14 h-14 rounded-2xl bg-white flex items-center justify-center text-brand-primary mb-6">
+                        <i class="ph ph-camera text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-ui-textPrimary">Photography</h3>
+                    <p class="text-ui-textSec">High-quality visual content creation for your products.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Process -->
+    <section id="process" class="py-24 bg-ui-bgSec">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold mb-24 text-center text-ui-textPrimary">How We Work</h2>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="text-center group cursor-pointer transition-transform duration-300 ease-in-out hover:scale-105">
+                    <div class="w-20 h-20 mx-auto rounded-full bg-white group-hover:bg-[#E4D96F] transition-colors duration-300 flex items-center justify-center text-brand-primary group-hover:text-[#1F1F1F] text-3xl mb-8">
+                        1
+                    </div>
+                    <h3 class="font-bold text-lg mb-2 group-hover:text-[#E4D96F] transition-colors duration-300">Discovery</h3>
+                    <p class="text-ui-textSec text-sm">We learn about your brand, goals, and audience.</p>
+                </div>
+                <div class="text-center group cursor-pointer transition-transform duration-300 ease-in-out hover:scale-105">
+                    <div class="w-20 h-20 mx-auto rounded-full bg-white group-hover:bg-[#E4D96F] transition-colors duration-300 flex items-center justify-center text-brand-primary group-hover:text-[#1F1F1F] text-3xl mb-8">
+                        2
+                    </div>
+                    <h3 class="font-bold text-lg mb-2 group-hover:text-[#E4D96F] transition-colors duration-300">Strategy</h3>
+                    <p class="text-ui-textSec text-sm">We map out a creative plan tailored to your needs.</p>
+                </div>
+                <div class="text-center group cursor-pointer transition-transform duration-300 ease-in-out hover:scale-105">
+                    <div class="w-20 h-20 mx-auto rounded-full bg-white group-hover:bg-[#E4D96F] transition-colors duration-300 flex items-center justify-center text-brand-primary group-hover:text-[#1F1F1F] text-3xl mb-8">
+                        3
+                    </div>
+                    <h3 class="font-bold text-lg mb-2 group-hover:text-[#E4D96F] transition-colors duration-300">Creation</h3>
+                    <p class="text-ui-textSec text-sm">Our designers and creators bring the vision to life.</p>
+                </div>
+                <div class="text-center group cursor-pointer transition-transform duration-300 ease-in-out hover:scale-105">
+                    <div class="w-20 h-20 mx-auto rounded-full bg-white group-hover:bg-[#E4D96F] transition-colors duration-300 flex items-center justify-center text-brand-primary group-hover:text-[#1F1F1F] text-3xl mb-8">
+                        4
+                    </div>
+                    <h3 class="font-bold text-lg mb-2 group-hover:text-[#E4D96F] transition-colors duration-300">Launch</h3>
+                    <p class="text-ui-textSec text-sm">We deliver the final assets and help you launch.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Projects -->
+    <section id="work" class="py-24 bg-ui-bg">
+        <div class="container mx-auto px-6">
+            <div class="flex justify-between items-end mb-16">
+                <h2 class="text-4xl font-bold text-ui-textPrimary">Featured Work</h2>
+                <a href="#" class="text-brand-primary font-medium hover:underline hidden sm:block">View all projects &rarr;</a>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <div class="group cursor-pointer">
+                    <div class="rounded-card overflow-hidden mb-6 bg-ui-bgSec aspect-[4/3]">
+                        <img src="assets/portfolio_1.png" alt="Project 1" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 mix-blend-multiply">
+                    </div>
+                    <h3 class="text-2xl font-bold mb-2 group-hover:text-brand-primary transition-colors duration-300">Creative Brand Identity</h3>
+                    <p class="text-ui-textSec font-medium">Branding • Logo Design</p>
+                </div>
+                <div class="group cursor-pointer mt-0 md:mt-16">
+                    <div class="rounded-card overflow-hidden mb-6 bg-ui-bgSec aspect-[4/3]">
+                        <img src="assets/portfolio_2.png" alt="Project 2" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 mix-blend-multiply">
+                    </div>
+                    <h3 class="text-2xl font-bold mb-2 group-hover:text-brand-primary transition-colors duration-300">Startup Brand Identity</h3>
+                    <p class="text-ui-textSec font-medium">Branding • Logo Design</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-24 bg-ui-bgSec">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto bg-white p-12 md:p-16 rounded-card text-center">
+                <div class="text-amber-400 text-2xl mb-6">★★★★★</div>
+                <p class="text-2xl md:text-3xl text-ui-textPrimary font-medium leading-relaxed mb-12">
+                    "Creative work that exceeded expectations."
+                </p>
+                <div class="flex items-center justify-center gap-4">
+                    <div class="w-12 h-12 bg-ui-bgSec rounded-full flex items-center justify-center text-ui-textSec font-bold">JD</div>
+                    <div class="text-left">
+                        <h4 class="font-bold text-ui-textPrimary">Jane Doe</h4>
+                        <p class="text-ui-textSec text-sm">Founder, TechFlow</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA & Contact -->
+    <section id="contact" class="py-24 bg-ui-bg">
+        <div class="container mx-auto px-6">
+            <div class="max-w-3xl mx-auto text-center mb-20">
+                <h2 class="text-5xl font-bold mb-6 text-ui-textPrimary">Ready to start?</h2>
+                <p class="text-xl text-ui-textSec">Every great brand starts with a conversation.</p>
+            </div>
+            
+            <div class="max-w-2xl mx-auto bg-ui-bgSec p-8 md:p-12 rounded-card">
+                <form class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-medium text-ui-textPrimary mb-3">Name</label>
+                            <input type="text" class="w-full px-5 py-4 rounded-xl bg-white focus:outline-none focus:ring-2 focus:ring-brand-primary/20 transition-colors text-ui-textPrimary" required>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-ui-textPrimary mb-3">Email</label>
+                            <input type="email" class="w-full px-5 py-4 rounded-xl bg-white focus:outline-none focus:ring-2 focus:ring-brand-primary/20 transition-colors text-ui-textPrimary" required>
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-ui-textPrimary mb-3">Message</label>
+                        <textarea rows="5" class="w-full px-5 py-4 rounded-xl bg-white focus:outline-none focus:ring-2 focus:ring-brand-primary/20 transition-colors text-ui-textPrimary" required></textarea>
+                    </div>
+                    <div class="pt-4">
+                        <button type="submit" class="w-full bg-brand-accent text-ui-textPrimary px-8 py-4 rounded-btn btn-text hover:bg-brand-hover hover:text-white transition-colors duration-300">
+                            Send Message
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 bg-white text-ui-textSec">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
+            <a href="#">
+                <img src="assets/logo.svg" alt="Creoviz" class="h-8" />
+            </a>
+            
+            <div class="flex gap-10 font-medium text-sm">
+                <a href="#services" class="hover:text-brand-primary transition-colors duration-300">Services</a>
+                <a href="#work" class="hover:text-brand-primary transition-colors duration-300">Portfolio</a>
+                <a href="mailto:hello@creoviz.com" class="hover:text-brand-primary transition-colors duration-300">Email Us</a>
+            </div>
+            
+            <div class="text-sm">
+                &copy; 2026 Creoviz. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
