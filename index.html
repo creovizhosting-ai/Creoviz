@@ -75,6 +75,30 @@
                     Get a Quote
                 </a>
             </div>
+
+            <!-- Mobile Menu Toggle -->
+            <div class="md:hidden flex items-center">
+                <button id="mobile-menu-btn" class="text-ui-textPrimary hover:text-brand-primary p-2" aria-label="Open menu">
+                    <i class="ph ph-list text-3xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu" class="fixed inset-0 bg-white/95 backdrop-blur-md z-40 hidden flex-col items-center justify-center pt-20 pb-8 px-6 overflow-y-auto h-screen">
+            <button id="mobile-menu-close" class="absolute top-6 right-6 text-ui-textPrimary hover:text-brand-primary p-2" aria-label="Close menu">
+                <i class="ph ph-x text-3xl"></i>
+            </button>
+            <div class="flex flex-col items-center gap-6 text-xl text-ui-textSec w-full max-w-sm mt-8">
+                <a href="#home" class="mobile-link hover:text-brand-primary transition-colors py-2">Home</a>
+                <a href="#services" class="mobile-link hover:text-brand-primary transition-colors py-2">Services</a>
+                <a href="#work" class="mobile-link hover:text-brand-primary transition-colors py-2">Work</a>
+                <a href="#process" class="mobile-link hover:text-brand-primary transition-colors py-2">Process</a>
+                <a href="#contact" class="mobile-link hover:text-brand-primary transition-colors py-2">Contact</a>
+                <a href="#contact" class="mobile-link bg-brand-accent text-ui-textPrimary px-8 py-4 rounded-btn btn-text hover:bg-brand-hover hover:text-white transition-colors w-full text-center mt-6">
+                    Get a Quote
+                </a>
+            </div>
         </div>
     </nav>
 
@@ -87,8 +111,8 @@
                         <i class="ph-fill ph-sparkle"></i> Creative Digital Studio
                     </div>
                     <h1 class="font-bold mb-6 text-ui-textPrimary leading-[1.1]">
-                        <span class="block text-6xl md:text-[4rem] lg:text-[4.25rem]">We Build Brands</span>
-                        <span class="block text-5xl md:text-6xl lg:text-6xl">People Remember.</span>
+                        <span class="block text-4xl sm:text-5xl md:text-[4rem] lg:text-[4.25rem]">We Build Brands</span>
+                        <span class="block text-4xl sm:text-5xl md:text-6xl lg:text-6xl">People Remember.</span>
                     </h1>
                     <p class="text-lg text-ui-textSec mb-10 leading-relaxed">
                         We create brands, websites & digital experiences that drive growth.
@@ -130,42 +154,42 @@
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-ui-bgSec p-10 rounded-card transition-all duration-300 hover:bg-brand-primary/5">
+                <div class="bg-ui-bgSec p-6 sm:p-10 rounded-card transition-all duration-300 hover:bg-brand-primary/5">
                     <div class="w-14 h-14 rounded-2xl bg-white flex items-center justify-center text-brand-primary mb-6">
                         <i class="ph ph-desktop text-3xl"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-3 text-ui-textPrimary">Website Design</h3>
                     <p class="text-ui-textSec">Modern, responsive, and high-converting websites built with purpose.</p>
                 </div>
-                <div class="bg-ui-bgSec p-10 rounded-card transition-all duration-300 hover:bg-brand-primary/5">
+                <div class="bg-ui-bgSec p-6 sm:p-10 rounded-card transition-all duration-300 hover:bg-brand-primary/5">
                     <div class="w-14 h-14 rounded-2xl bg-white flex items-center justify-center text-brand-primary mb-6">
                         <i class="ph ph-bezier-curve text-3xl"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-3 text-ui-textPrimary">Graphic Design</h3>
                     <p class="text-ui-textSec">Stunning visual identities, logos, and marketing materials.</p>
                 </div>
-                <div class="bg-ui-bgSec p-10 rounded-card transition-all duration-300 hover:bg-brand-primary/5">
+                <div class="bg-ui-bgSec p-6 sm:p-10 rounded-card transition-all duration-300 hover:bg-brand-primary/5">
                     <div class="w-14 h-14 rounded-2xl bg-white flex items-center justify-center text-brand-primary mb-6">
                         <i class="ph ph-film-strip text-3xl"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-3 text-ui-textPrimary">Video Editing</h3>
                     <p class="text-ui-textSec">Professional edits that tell your brand's unique story.</p>
                 </div>
-                <div class="bg-ui-bgSec p-10 rounded-card transition-all duration-300 hover:bg-brand-primary/5">
+                <div class="bg-ui-bgSec p-6 sm:p-10 rounded-card transition-all duration-300 hover:bg-brand-primary/5">
                     <div class="w-14 h-14 rounded-2xl bg-white flex items-center justify-center text-brand-primary mb-6">
                         <i class="ph ph-video-camera text-3xl"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-3 text-ui-textPrimary">Motion Graphics</h3>
                     <p class="text-ui-textSec">Engaging vector animations that simplify complex ideas.</p>
                 </div>
-                <div class="bg-ui-bgSec p-10 rounded-card transition-all duration-300 hover:bg-brand-primary/5">
+                <div class="bg-ui-bgSec p-6 sm:p-10 rounded-card transition-all duration-300 hover:bg-brand-primary/5">
                     <div class="w-14 h-14 rounded-2xl bg-white flex items-center justify-center text-brand-primary mb-6">
                         <i class="ph ph-megaphone text-3xl"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-3 text-ui-textPrimary">Digital Marketing</h3>
                     <p class="text-ui-textSec">Data-driven strategies to reach and engage your audience.</p>
                 </div>
-                <div class="bg-ui-bgSec p-10 rounded-card transition-all duration-300 hover:bg-brand-primary/5">
+                <div class="bg-ui-bgSec p-6 sm:p-10 rounded-card transition-all duration-300 hover:bg-brand-primary/5">
                     <div class="w-14 h-14 rounded-2xl bg-white flex items-center justify-center text-brand-primary mb-6">
                         <i class="ph ph-camera text-3xl"></i>
                     </div>
@@ -263,7 +287,7 @@
     <section id="contact" class="py-24 bg-ui-bg">
         <div class="container mx-auto px-6">
             <div class="max-w-3xl mx-auto text-center mb-20">
-                <h2 class="text-5xl font-bold mb-6 text-ui-textPrimary">Ready to start?</h2>
+                <h2 class="text-4xl sm:text-5xl font-bold mb-6 text-ui-textPrimary">Ready to start?</h2>
                 <p class="text-xl text-ui-textSec">Every great brand starts with a conversation.</p>
             </div>
             
@@ -272,7 +296,7 @@
                 <div id="success-message" class="hidden flex-col items-center justify-center text-center p-8 transition-opacity duration-500 bg-white rounded-xl mb-8">
                     <div class="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center text-3xl mb-6">✓</div>
                     <h3 class="text-3xl font-bold text-ui-textPrimary mb-3">Message Sent!</h3>
-                    <p class="text-ui-textSec text-lg">Thank you—we’ll be in touch soon.</p>
+                    <p class="text-ui-textSec text-lg">Thank you!. we’ll be in touch soon.</p>
                 </div>
                 
                 <form id="contact-form" name="contact" method="POST" data-netlify="true" class="space-y-6 transition-opacity duration-500">
@@ -321,6 +345,34 @@
     </footer>
 
     <script>
+        // Mobile Menu Logic
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenuClose = document.getElementById('mobile-menu-close');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        function toggleMenu() {
+            if (mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.remove('hidden');
+                mobileMenu.classList.add('flex');
+                document.body.style.overflow = 'hidden'; // Prevent scrolling behind menu
+            } else {
+                mobileMenu.classList.add('hidden');
+                mobileMenu.classList.remove('flex');
+                document.body.style.overflow = '';
+            }
+        }
+
+        if (mobileMenuBtn && mobileMenuClose && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', toggleMenu);
+            mobileMenuClose.addEventListener('click', toggleMenu);
+            
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', toggleMenu);
+            });
+        }
+
+        // Contact Form Logic
         const contactForm = document.getElementById('contact-form');
         const successMessage = document.getElementById('success-message');
 
