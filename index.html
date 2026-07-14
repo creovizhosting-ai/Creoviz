@@ -294,7 +294,10 @@
             <div class="max-w-2xl mx-auto bg-ui-bgSec p-8 md:p-12 rounded-card relative">
                 <!-- Success Message -->
                 <div id="success-message" class="hidden flex-col items-center justify-center text-center p-8 transition-opacity duration-500 bg-white rounded-xl mb-8">
-                    <div class="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center text-3xl mb-6">✓</div>
+                    <div class="mb-8 relative">
+                        <div class="absolute inset-0 bg-green-400 blur-xl opacity-20 rounded-full"></div>
+                        <i class="ph-fill ph-check-circle text-7xl text-green-500 relative z-10 drop-shadow-sm"></i>
+                    </div>
                     <h3 class="text-3xl font-bold text-ui-textPrimary mb-3">Message Sent!</h3>
                     <p class="text-ui-textSec text-lg">Thank you!. we’ll be in touch soon.</p>
                 </div>
